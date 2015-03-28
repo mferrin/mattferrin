@@ -1,0 +1,554 @@
+/*
+Theme Name: Matt Ferrin Custom Theme
+Author: Jason Ramirez
+Author URI: http://weatetheweb.com/
+Description: Custom there for "The" Matt Ferrin.
+License: 
+License URI: 
+Tags: Custom theme
+Text Domain: mattferrin
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption,
+th,
+td {
+	font-weight: normal;
+	text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+html {
+	overflow-y: scroll;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+a:focus {
+	outline: thin dotted;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+audio:not([controls]) {
+	display: none;
+}
+del {
+	color: #333;
+}
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin: 24px;
+	margin-bottom: 1.714285714rem;
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+small {
+	font-size: smaller;
+}
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+/* Clearing floats */
+.clear:after,
+.wrapper:after,
+.format-status .entry-header:after {
+	clear: both;
+}
+.clear:before,
+.clear:after,
+.wrapper:before,
+.wrapper:after,
+.format-status .entry-header:before,
+.format-status .entry-header:after {
+	display: table;
+	content: "";
+}
+
+
+
+/* =Fonts
+-------------------------------------------------------------- */
+@font-face {
+  font-family: 'AvenirBlack';
+  src: url('fonts/AvenirBlack/Avenir_Black.eot');
+  src: url('fonts/AvenirBlack/Avenir_Black.eot?#iefix') format('embedded-opentype'),
+       url('fonts/AvenirBlack/Avenir_Black.otf') format('opentype'),
+       url('fonts/AvenirBlack/Avenir_Black.woff') format('woff'),
+       url('fonts/AvenirBlack/Avenir_Black.suit') format('truetype'),
+       url('fonts/AvenirBlack/Avenir_Black.svg#Avenir_Black') format('svg');
+}
+
+@font-face {
+  font-family: 'AvenirLight';
+  src: url('fonts/AvenirLight/Avenir_Light.eot');
+  src: url('fonts/AvenirLight/Avenir_Light.eot?#iefix') format('embedded-opentype'),
+       url('fonts/AvenirLight/Avenir_Light.otf') format('opentype'),
+       url('fonts/AvenirLight/Avenir_Light.woff') format('woff'),
+       url('fonts/AvenirLight/Avenir_Light.suit') format('truetype'),
+       url('fonts/AvenirLight/Avenir_Light.svg#Avenir_Light') format('svg');
+}
+
+
+
+/* =Shared
+-------------------------------------------------------------- */
+body {
+	background: #f2f1ee;
+	background: #ede9e7;
+	margin: 0;
+	font-family: "AvenirLight", sans-serif;
+}
+h1 {
+  font-weight: 100;
+  color: #C6C1C0;
+} 
+.break {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	height: 15px;
+	background-image: url('images/break.png');
+	background-position: center top;
+	border-top: solid 1px #DDD;
+	background-repeat: no-repeat;
+}
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+.wrapper-color {
+	height: auto;
+	width: 100%;
+}
+section {
+	position: relative;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+#masthead {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	text-align: center;
+	height: 135px;
+	width: 100%;
+	background: white;
+	z-index: 999;
+}
+#nav-logo {
+	position: absolute;
+	left: 40px;
+	top: 50px;
+}
+#site-navigation {
+	position: absolute; 
+	top: 60px;
+	right: 20px;
+	text-align: right;
+}
+/*#site-navigation li.current-menu-item {
+	margin: 0 8px 0 8px !important;
+}*/
+#site-navigation li.current-menu-item a {
+	font-family: "AvenirBlack" !important;
+}
+.nav-menu li a,
+.current_page_item,
+.current_page_item a,
+.page_item,
+.page_item a {
+	font-family: "AvenirLight", sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: black;
+}
+ul.nav-menu li {
+	display: inline;
+	margin: 0 10px 0 10px;
+}
+a.nav-selected {
+	color: rgba( 66,167,148,1) !important;
+	color: #dd312b !important;
+}
+
+
+/* =Landing Page 
+-------------------------------------------------------------- */
+section {
+	display: none;
+	border-bottom: solid 3px white;
+}
+.section-title {
+	font-size: 32px;
+	font-family: "AvenirBlack", sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 42px;
+	text-align: left;
+}
+
+/* =Landing Work */
+section#work {
+	padding-top: 135px;
+}
+#work-wrapper {
+	position: relative;
+	margin: 35px auto 30px;
+	text-align: center;
+	width: 100%;
+}
+nav#work-menu-wrapper {
+	padding-top: 60px;
+	padding-left: 40px;
+	text-align: left;
+}
+nav#work-menu-wrapper ul * {
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+nav#work-menu-wrapper ul li a {
+	font-family: "AvenirBlack", sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: black;
+}
+div.work-button {
+	position: relative;
+	width: 21px;
+	height: 20px;
+	background-image: url("images/img-empty-button.png");
+	background-repeat: no-repeat;
+	margin-right: 0px;
+}
+div.work-button:hover,
+div.work-button-full {
+	cursor: pointer;
+	background-image: url("images/img-full-button.png");
+}
+.work-item {
+	display: none;
+	float: left;
+	clear: none;
+	font-size: 14px;
+	color: #777;
+	padding: 10px;
+	width: 180px;
+	height: 180px;
+	text-align: center;
+}
+.work-item:hover {
+	cursor: pointer;
+}	
+.work-image-wrapper:hover {
+	cursor: pointer;
+}
+.work-item .work-image-wrapper {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 180px;	
+	height: 180px;
+	border-radius: 220px;	
+	-moz-border-radius: 220px;
+	-webkit-border-radius: 220px;
+	overflow: hidden;
+}
+.work-item .work-title-wrapper {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 180px;	
+	height: 180px;
+  line-height: 180px;
+  text-align: center;	
+ 	border-radius: 220px; 
+	-moz-border-radius: 220px;
+	-webkit-border-radius: 220px;
+	overflow: hidden;
+	background: rgba( 66,167,148,.75);
+	background: rgba( 221,49,43,.75);
+	color: white;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+span.work-title {
+	font-family: "AvenirLight", sans-serif;	
+}
+.work-item .work-title-wrapper span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;      
+}
+.work-item .work-image-wrapper img {
+	width: 180px;	
+	height: 180px;
+}
+.work-item .selected {
+	border: solid 7px #009CA8;
+}
+.work-title-wrapper {
+	display: none;
+}
+
+
+/* =Landing Sections
+-------------------------------------------------------------- */
+.landing-section {
+	text-align: center;
+	font-family: "AvenirBlack";
+	padding: 80px 40px 80px 40px;
+}
+.section-text{
+	text-align: left;
+	line-height: 1.2em;
+	text-transform: uppercase;
+}
+.section-text h1 {
+	font-size: 36px;
+	color: black;
+	margin-bottom: 14px;
+	padding-top: 28px;
+	border-top: solid 3px rgba(0,0,0,.05);
+}
+.section-text p {
+	font-size: 14px;
+	margin-bottom: 8px;
+}
+
+
+/* =Landing Bio 
+-------------------------------------------------------------- */
+#bio-text {
+	text-align: left;
+	line-height: 1.2em;
+	text-transform: none;
+	-moz-column-count:4; /* Firefox */
+	-webkit-column-count:4; /* Safari and Chrome */
+	column-count:4;
+}
+#bio-text p {
+	font-family: "AvenirLight";
+}
+
+
+/* =Landing Clients 
+-------------------------------------------------------------- */
+#client-images img {
+		height: 140px;
+		border-bottom: solid 1px #ccc;
+		padding: 0px 20px 0px 20px;
+}
+
+
+/* =Footer
+-------------------------------------------------------------- */
+footer {
+	position: relative;
+	margin-top: 40px;
+	padding: 40px;
+	background: #1d1d1d;
+	display: none;
+	overflow: auto;
+}
+footer p,
+footer a {
+	font-size: 10px;
+	text-transform: uppercase;
+	line-height: 20px;
+	color: white;
+	text-decoration: none;
+}
+footer p {
+	font-family: "AvenirLight", sans-serif;
+}
+#footer-logo {
+	margin-bottom: 10px;
+}
+#footer-left-info {
+	float: left;
+	text-align: left;
+}
+#footer-right-info {
+	float: right;
+	text-align: right;
+}
+
+
+/* =Single Content
+-------------------------------------------------------------- */
+.single-content {
+	/*width: 960px;*/
+	position: relative;
+	margin: 0 auto;
+	padding: 50px 0 50px 0;
+	text-align: center;
+}
+article {
+	padding-top: 135px;
+	width: 760px;
+	margin: 0 auto;
+}
+article .aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+article p {
+	line-height: 2em;
+	text-align: left;
+	margin: 20px 0 20px 0;
+	font-family: "AvenirLight", sans-serif;
+	font-weight: 100;
+}
+article iframe {
+	margin: 20px 0 20px 0;
+} 
+article img {
+	border: solid 5px #FFF;
+	box-shadow: 0 3px 12px rgba( 0,0,0,.25 );
+	-moz-box-shadow: 0 3px 12px rgba( 0,0,0,.25 );
+	-webkit-box-shadow: 0 3px 12px rgba( 0,0,0,.25 );
+}
+article img.no-border {
+	border: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+article .wp-caption-text {
+	font-size: 12px;
+	font-style: italic;
+	text-align: center;
+	color: #AAAAAA;
+	line-height: 1.5em;
+}
+
+
+
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
