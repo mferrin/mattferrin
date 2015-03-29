@@ -1,0 +1,2 @@
+[Sun Mar 29 12:31:49.401506 2015] [authz_core:error] [pid 1488] [client 127.0.0.1:50646] AH01630: client denied by server configuration: /Users/jasonramirez/workspace/jasonramirez/mattferrin/
+[Sun Mar 29 12:31:49.503639 2015] [authz_core:error] [pid 1488] [client 127.0.0.1:50646] AH01630: client denied by server configuration: /Users/jasonramirez/workspace/jasonramirez/mattferrin/favicon.ico
