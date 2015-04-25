@@ -213,17 +213,34 @@ section {
 	left: 40px;
 	top: 50px;
 }
+
 #site-navigation {
 	position: absolute; 
-	top: 60px;
+	top: 53px;
 	right: 20px;
 	text-align: right;
 }
-/*#site-navigation li.current-menu-item {
-	margin: 0 8px 0 8px !important;
-}*/
+#site-navigation ul {
+  display: inline-block;
+  vertical-align: middle;
+}
+#site-navigation .email-icon {
+	background-image: url("images/email-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 32px;
+  margin: 0 10px 0 15px;
+  vertical-align: middle;
+  width: 30px;
+}
 #site-navigation li.current-menu-item a {
 	font-family: "AvenirBlack" !important;
+}
+
+ul.nav-menu li {
+	display: inline;
+	margin: 0 10px 0 10px;
 }
 .nav-menu li a,
 .current_page_item,
@@ -235,10 +252,6 @@ section {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: black;
-}
-ul.nav-menu li {
-	display: inline;
-	margin: 0 10px 0 10px;
 }
 a.nav-selected {
 	color: rgba( 66,167,148,1) !important;

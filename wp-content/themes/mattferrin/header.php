@@ -31,23 +31,11 @@
 		</script>
 	</head>
 	<body <?php body_class(); ?>>
-		
-		<!-- wrapper -->
 		<div class="wrapper">
-	
-			<!-- header -->
 			<header id="masthead" class="site-header" role="banner">
-				
-				<!-- logo -->
 				<a href="/"><img id="nav-logo" src="<?php echo get_template_directory_uri() . '/images/logo-matt-ferrin.svg';?>" height="44" alt="Matt Ferrin" /></a>
-				<!-- /logo -->
-					
-				<!-- nav -->
 				<nav id="site-navigation" class="nav main-navigation" role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'menu_class' => 'nav-menu' ) ); ?>
-					<?php //html5blank_nav(); ?>
+          <a class="email-icon" href="mailto:ferrin@gmail.com"></a>
 				</nav>
-				<!-- /nav -->
-			
 			</header>
-			<!-- /header -->
