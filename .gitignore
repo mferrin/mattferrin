@@ -1,3 +1,5 @@
 _assets
-wp-config.php
 .passwords
+wp-config.php
+wp-content/uploads
+wp-content/uploads/*
